@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/phoenix/static/css/main.f8501755.css",
+    "main.js": "/phoenix/static/js/main.070e14ae.js",
+    "static/media/MTitle.png": "/phoenix/static/media/MTitle.643da41fa411f948fad1.png",
+    "static/media/certificate1.png": "/phoenix/static/media/certificate1.a003fcd98eeb28363c1a.png",
+    "static/media/production-2.png": "/phoenix/static/media/production-2.74924a59d6da0ebf21a3.png",
+    "static/media/forest.png": "/phoenix/static/media/forest.0b724b1c034b5be81935.png",
+    "static/media/formcallback-ship.png": "/phoenix/static/media/formcallback-ship.7a67c03608117bcbd99a.png",
+    "static/media/MPellets.png": "/phoenix/static/media/MPellets.94859fd890a817b9164b.png",
+    "static/media/pellets.png": "/phoenix/static/media/pellets.94859fd890a817b9164b.png",
+    "static/media/production-1.png": "/phoenix/static/media/production-1.43e00996ff9421379626.png",
+    "static/media/MBriquettes.png": "/phoenix/static/media/MBriquettes.d9bc7b7763ac07ff5572.png",
+    "static/media/briquettes.png": "/phoenix/static/media/briquettes.d9bc7b7763ac07ff5572.png",
+    "static/media/MCharcoal.png": "/phoenix/static/media/MCharcoal.6cbbbc26a0be0becdf50.png",
+    "static/media/boards.png": "/phoenix/static/media/boards.6cbbbc26a0be0becdf50.png",
+    "static/media/MPeatbriquette.png": "/phoenix/static/media/MPeatbriquette.e5d11e389e3fe89e4907.png",
+    "static/media/Bioenergy.svg": "/phoenix/static/media/Bioenergy.2e67612106fc356ee30c3f6a881ac759.svg",
+    "static/media/customers.svg": "/phoenix/static/media/customers.2cf900fa78b5e024bbbcbf3527613d0e.svg",
+    "static/media/market.svg": "/phoenix/static/media/market.ce354c7144434809263c1d2c5bc704b5.svg",
+    "static/media/Forestry.svg": "/phoenix/static/media/Forestry.58c058f948b5fe6a1823f206efbb19cc.svg",
+    "static/media/Approach.svg": "/phoenix/static/media/Approach.1d55ec16fcf50d3c58362e40deeb9fcb.svg",
+    "static/media/Support.svg": "/phoenix/static/media/Support.c222ef32b39172ad2b4f2baf4f33624a.svg",
+    "index.html": "/phoenix/index.html",
+    "main.f8501755.css.map": "/phoenix/static/css/main.f8501755.css.map",
+    "main.070e14ae.js.map": "/phoenix/static/js/main.070e14ae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8501755.css",
+    "static/js/main.070e14ae.js"
+  ]
+}
