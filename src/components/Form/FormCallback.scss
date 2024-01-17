@@ -1,0 +1,174 @@
+@import '../../styles/App.scss';
+
+.formcallback {
+    @include adaptivValue ('padding-bottom', 30, 15, 1);  
+}
+
+.formcallback__body {
+    position: relative;
+    @include adaptivValue ('padding-top', 60, 10, 1);
+    @include adaptivValue ('padding-bottom', 60, 10, 1);
+    @include adaptivValue ('padding-left', 80, 10, 1);
+    @include adaptivValue ('padding-right', 80, 10, 1);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.formcallback__title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    color: #181414;
+    max-width: 700px;
+    @include adaptivValue ('padding-bottom', 20, 15, 1);
+    z-index: 1;
+}
+.formcallback__subtitle {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 145%;
+    color: #181414;
+    max-width: 400px;
+    @include adaptivValue ('padding-bottom', 80, 30, 1);
+    z-index: 1;
+}
+.formcallback__form {
+    display: flex;
+    align-items: center;
+    @include adaptivValue ('gap', 22, 11, 1);
+    height: fit-content;
+}
+.formcallback__form-name,
+.formcallback__form-phone {
+    height: 52.8px;
+    width: 231px;
+}
+.form-name__formcallback,
+.form-phone__formcallback{
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #929292;
+    padding-left: 21px;
+}
+
+
+.formcallback__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 474px;
+    background-image: url(../../img/formcallback-ship.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+
+.formcallback__redbutton{
+    cursor: pointer;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    background: #C60101;
+    border-radius: 10px;
+    padding: 19px 62.21px 17px 63.39px;
+}
+.formcallback__redbutton-link{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    color: #F9F9F9;
+}
+
+$color-btn-red: #d60000;
+$border-radius-btn-red: 10px;
+.formcallback__redbutton{
+    position: relative;
+    z-index: 0;
+}
+.formcallback__redbutton::before{
+    position: absolute;
+    content: "";
+    background-color: $color-btn-red;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .6s ease;
+    border-radius: $border-radius-btn-red;
+    z-index: -1;
+}
+.formcallback__redbutton:hover::before{
+    width: 100%;
+}
+
+
+
+.form-phone__formcallback:invalid{
+    background-color: #ffeded;
+    animation: .3s shake;
+}
+
+.formcallback__form-phone{
+    position: relative;
+}
+
+.format__form-phone{
+    display: none;
+}
+.form-phone__formcallback:invalid + .format__form-phone{
+    display: flex;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    height: 25px;
+    width: 100%;
+    border: solid 1px #e4e4e4;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #929292;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes shake {
+    25%{transform: translateX(4px);}
+    50%{transform: translateX(-4px);}
+    75%{transform: translateX(4px);}
+}
+
+@media (max-width: 850px) {
+    .formcallback__title,
+    .formcallback__subtitle{
+        display: none;
+    }
+    .formcallback__form{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-phone__formcallback:invalid + .format__form-phone{
+        display: none;
+    }
+}

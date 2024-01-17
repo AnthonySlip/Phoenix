@@ -1,0 +1,57 @@
+@import '../styles/App.scss';
+
+
+.whywe__advantag {
+    display: flex;
+    align-items: flex-start;
+    @include adaptivValue ('gap', 20, 10, 1);
+}
+.advantag__img {
+    height: fit-content;
+    width: fit-content;
+}
+.advantag__description {
+    display: flex;
+    flex-direction: column;
+}
+.advantag__title {
+    width: 100%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    color: #181414;
+    padding-bottom: 5px;
+}
+.advantag__subtitle {
+    width: 100%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 120%;
+    color: #181414;
+}
+
+@media (max-width: 790px) {
+    .whywe__advantag{
+        align-items: center;
+    }
+    .advantag__title {
+        font-size: 14px;
+    }
+    .advantag__subtitle {
+        font-size: 11px;
+    }
+}
+
+.whywe__advantag:hover .advantag__img{
+    transform: scale(115%);
+}
+.whywe__advantag:hover .advantag__title{
+    color: rgb(153, 0, 0);
+}
+.whywe__advantag:hover .advantag__subtitle{
+    font-weight: 600;
+}

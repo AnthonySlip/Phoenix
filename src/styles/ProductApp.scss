@@ -1,0 +1,174 @@
+@import './App.scss';
+
+
+
+
+.productApp__apb{
+    flex: 1 1 auto;
+
+};
+.productApp__apb-body{
+    height: fit-content;
+    max-width: 278px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    gap: 20px;
+};
+.productApp__apb-body:hover {
+    transform: scale(1.01);
+}
+.productApp__apb-img img{
+    width: 100%;
+};
+.productApp__apb-title{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    color: #181414;
+    margin: 0 20px;
+};
+.productApp__apb-subtitle{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 120%;
+    color: #181414;
+    margin: 0 20px;
+};
+.productApp__apb-price{
+    margin: 0 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: #181414;
+};
+.productApp__redbutton{
+    align-items: center;
+    text-align: center;
+    padding: 19px 63.7px 17px 64.9px;
+    background: #C60101;
+    border-radius: 10px;
+    margin: 0 20px 30px 20px;
+};
+.productApp__redbutton-link{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    color: #F9F9F9;
+};
+
+
+
+.productApp {
+}
+.productApp__container {
+}
+.productApp__body {
+    display: flex;
+    flex-direction: column;
+    margin: 43px 0 63px 0;
+}
+.productApp__direction {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 120%;
+    color: #A8A8A8;
+    padding-bottom: 6px;
+}
+.productApp__title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    color: #181414;
+    margin-bottom: 20px;
+}
+.productApp__window {
+    width: 100%;
+    height: 142px;
+    border-radius: 20px;
+    background-image: url(../img/forest.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+}
+.productApp__window:hover {
+    background-size: 102%;
+}
+.productApp__catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.productApp__row {
+    width: 100;
+    display: flex;
+    gap: 28px;
+}
+.catalog__item {
+    display: flex;
+    flex-direction: column;
+}
+.catalog__title {
+    margin: 40px 0 20px 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: #181414;
+}
+.catalog__body {
+    display: flex;
+    gap: 30px;
+}
+
+
+
+
+$color-btn-red: #d60000;
+$border-radius-btn-red: 10px;
+.productApp__redbutton{
+    position: relative;
+    z-index: 0;
+}
+.productApp__redbutton::before{
+    position: absolute;
+    content: "";
+    background-color: $color-btn-red;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .6s ease;
+    border-radius: $border-radius-btn-red;
+    z-index: -1;
+}
+.productApp__redbutton:hover::before{
+   width: 100%;
+}
+
+@media (max-width: 1150px) {
+    .productApp__row{
+        flex-direction: column;
+        align-items: center;
+    }
+    .catalog__body {
+        flex-direction: column;
+    }
+}

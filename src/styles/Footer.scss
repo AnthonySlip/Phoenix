@@ -1,0 +1,241 @@
+@import './App.scss';
+
+
+.footer {
+    background-color:  #404040;
+}
+.footer__container {
+    @include adaptivValue('padding-top', 28, 10, 1);
+    @include adaptivValue('padding-bottom', 28, 10, 1);
+}
+.footer__body{
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+.footer__info {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: rgba(255, 255, 255, 0.52);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer__logo {
+}
+.logo__footer {
+    height: 100%;
+}
+.footer__inc {
+    max-width: 240px;
+}
+.footer__rights {
+}
+
+
+
+.footer__menu {
+    margin-top: 5px;
+}
+.footer__menu-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer__menu-item {
+}
+.footer__menu-link {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+
+.footer__contacts {
+    margin-top: 5px;
+    max-width: 326px;
+    display: flex;
+    flex-direction: column;
+    @include adaptivValue ('gap', 17, 10, 1);
+}
+.footer__phone,
+.footer__email,
+.footer__location {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    @include adaptivValue ('gap', 13, 5, 1);
+}
+
+.phone__icon {
+    height: 100%;
+}
+.icon__phone {
+    height: 100%;
+}
+.phone__num {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    color: #FAD537;
+}
+
+.email__icon {
+    height: 100%;
+}
+.icon__email {
+    height: 100%;
+}
+.email__add {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+.location__icon {
+    height: 100%;
+}
+.icon__location {
+    height: 100%;
+}
+.location__add {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+
+.footer__callback {
+    display: flex;
+    flex-direction: column;
+    @include adaptivValue ('gap', 46, 15, 1);
+}
+.footer__redbutton{
+    padding: 15px 41.7px 14px 43.5px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+.footer__redbutton-link{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 120%;
+    color: #C60101;
+}
+.footer__policy a{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+$color-item: rgb(255, 255, 255);
+$border-size-item: 3px;
+.policy__footer{
+    position: relative;
+}
+.policy__footer::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    transition: all .6s ease;
+    border-bottom: solid $color-item $border-size-item;
+    transform: translateX(-50%);
+}
+.policy__footer:hover::before {
+    width: 100%;
+}
+
+.footer__menu-link{
+    position: relative;
+}
+.footer__menu-link::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    transition: all .6s ease;
+    border-bottom: solid $color-item $border-size-item;
+    transform: translateX(-50%);
+}
+.footer__menu-link:hover::before {
+    width: 100%;
+}
+
+$color-btn-red: rgb(228, 228, 228);
+$border-radius-btn-red: 10px;
+.footer__redbutton{
+    position: relative;
+    z-index: 0;
+}
+.footer__redbutton::before{
+    position: absolute;
+    content: "";
+    background-color: $color-btn-red;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .6s ease;
+    border-radius: $border-radius-btn-red;
+    z-index: -1;
+}
+.footer__redbutton:hover::before{
+   width: 100%;
+}
+
+.footer__phone:hover .phone__icon,
+.footer__email:hover .email__icon,
+.footer__location:hover .location__icon{
+    transform: scale(140%);
+
+}
+.footer__phone:hover .icon__phone,
+.footer__email:hover .icon__email,
+.footer__location:hover .icon__location{
+    fill: #f6ff00;
+}
+
+@media (max-width: 820px) {
+    .footer__contacts{
+        width: 250px;
+    }
+}
+
+@media (max-width: 550px) {
+    .footer__contacts{
+        margin: 0 auto;
+        gap: 0;
+        justify-content: space-around;
+    }
+    .footer__phone,
+    .footer__email,
+    .footer__location{
+        gap: 15px;
+    }
+}

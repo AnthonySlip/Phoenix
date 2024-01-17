@@ -1,0 +1,118 @@
+@import './App.scss';
+
+.contactApp {
+    flex: 1 0 auto;
+}
+.contactApp__body {
+    display: flex;
+    flex-direction: column;
+}
+.contactApp__direction {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 120%;
+    color: #A8A8A8;
+    @include adaptivValue ('margin-top', 43, 15, 1);
+}
+.contactApp__title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    color: #181414;
+    @include adaptivValue ('margin-bottom', 30, 10, 1);
+}
+.contactApp__interface {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    @include adaptivValue('margin-bottom', 60, 20, 1);
+}
+.contactApp__info {
+    height: 696px;
+    width: 585px;
+    border: 1px solid rgba(113, 78, 78, 0.1);
+    border-radius: 10px;
+    @include adaptivValue('margin-right', 15, 5, 1);
+}
+.contactApp__info-wrap {
+    padding: 24px 21px 22px 22px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contactApp__info-block {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: #181414;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-radius: 5px;
+    @include adaptivValue ('padding-left', 20, 10, 1);
+    @include adaptivValue ('padding-right', 20, 10, 1);
+}
+.contactApp__info-block:nth-child(2n+1) {
+    background: #EFEFEF;
+}
+
+.contactApp__info-q {
+
+}
+.contactApp__info-a {
+    text-align: end;
+}
+.contactApp__map {
+    @include adaptivValue('margin-left', 15, 5, 1);
+    height: 100%;
+    width: 585px;
+}
+.map__contactApp {
+    width: 100%;
+    height: 696px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 1025px) {
+    .contactApp__info{
+        
+        height: fit-content;
+    }
+    .contactApp__info-block{
+        gap: 5px;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 834px) {
+    .contactApp__interface{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contactApp__info{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .contactApp__map{
+        margin: 0 auto;
+    }
+    .contactApp__info-a{
+        text-align: center;
+    }
+}
+@media (max-width: 600px) {
+    .contactApp__map{
+        display: none;
+    }
+
+}

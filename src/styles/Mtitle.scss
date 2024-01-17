@@ -1,0 +1,103 @@
+@import './App.scss';
+
+.Mtitle {
+    @include adaptivValue ('padding-top', 30, 15, 1);
+    @include adaptivValue ('padding-bottom', 30, 15, 1);
+}
+.Mtitle__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(../img/MTitle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    border-radius: 20px;
+    width: 100%;
+    @include adaptivValue ('height', 545, 300, 1);
+}
+.Mtitle__body:hover{
+    background-size: 103%;
+}
+
+.Mtitle__title {
+    font-family: 'Poppins';
+    font-style: normal;
+    line-height: 120%;
+    color: #FFFFFF;
+    font-weight: 900;
+    font-size: 52px;
+    max-width: 613px;
+}
+.Mtitle__subtitle {
+    font-family: 'Poppins';
+    font-style: normal;
+    line-height: 120%;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 15px;
+    @include adaptivValue ('margin-bottom', 45, 15, 1);
+    max-width: 453px;
+}
+.Mtitle__redbutton{
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 19px 40px 17px 40px;
+}
+.Mtitle__redbutton-link{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    color: #181414;
+}
+
+@media (max-width: 630px) {
+    .Mtitle__title {
+        font-size: 28px;
+        max-width: 430px;
+    }
+    .Mtitle__subtitle{
+        display: none;
+    }
+    .Mtitle__redbutton{
+        display: none;
+    }
+    .Mtitle__body {
+        height: 130px;
+    }
+}
+
+@media (max-width: 301px) {
+    .Mtitle{
+        display: none;
+    }
+}
+
+$color-btn-red: #eaeaea;
+$border-radius-btn-red: 10px;
+.Mtitle__redbutton{
+    position: relative;
+    z-index: 0;
+}
+.Mtitle__redbutton::before{
+    position: absolute;
+    content: "";
+    background-color: $color-btn-red;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .6s ease;
+    border-radius: $border-radius-btn-red;
+    z-index: -1;
+}
+.Mtitle__redbutton:hover::before{
+    width: 100%;
+}

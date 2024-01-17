@@ -1,0 +1,302 @@
+@import './App.scss';
+
+.main{
+    flex: 1 1 auto;
+}
+
+
+.ourproducts{
+    @include adaptivValue ('padding-top', 30, 15, 1);
+    @include adaptivValue ('padding-bottom', 30, 15, 1);
+}
+
+.ourproducts__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include adaptivValue ('padding-bottom', 120, 30, 1);  
+}
+.main__apb{
+    border-radius: 10px 10px 0px 0px;
+}
+.main__apb-body{
+    height: fit-content;
+    max-width: 278px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+.main__apb-img{
+    height: 197px;
+    width: 278px;
+}
+.Pellets{
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/MPellets.png);
+    background-repeat: no-repeat;
+}
+.Briquettes {
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/MBriquettes.png);
+    background-repeat: no-repeat;
+}
+.Charcoal {
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/MCharcoal.png);
+    background-repeat: no-repeat;
+}
+.Peat.briquette {
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/MPeatbriquette.png);
+    background-repeat: no-repeat;
+}
+.Pellets:hover,
+.Briquettes:hover,
+.Charcoal:hover,
+.Peat.briquette:hover{
+    background-size: 110%;
+}
+
+
+
+.main__apb-title{
+    align-self: flex-start;
+    padding: 20px 20px 0px 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    color: #181414;
+}
+.main__apb-subtitle{
+    padding: 10px 20px 30px 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 120%;
+    color: #181414;
+}
+.main__apb-price{
+    display: none;
+}
+.ourproducts__redbutton{
+    margin-bottom: 30px;
+    background: #C60101;
+    border-radius: 10px;
+    width: 237px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ourproducts__redbutton-link{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    color: #F9F9F9;
+}
+
+@media (max-width: 1140px) {
+    .ourproducts__body{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 25px;
+    }
+    .main__apb-body{
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .ourproducts__body{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+$color-btn-red: #d60000;
+$border-radius-btn-red: 10px;
+.ourproducts__redbutton{
+    position: relative;
+    z-index: 0;
+}
+.ourproducts__redbutton::before{
+    position: absolute;
+    content: "";
+    background-color: $color-btn-red;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .6s ease;
+    border-radius: $border-radius-btn-red;
+    z-index: -1;
+}
+.ourproducts__redbutton:hover::before{
+    width: 100%;
+}
+
+
+
+
+
+.whywe {
+    @include adaptivValue ('padding-top', 25, 15, 1);
+    @include adaptivValue ('padding-bottom', 30, 15, 1);
+}
+.whywe__wrap {
+    @include adaptivValue ('padding-top', 45, 20, 1);
+    @include adaptivValue ('padding-bottom', 50, 20, 1);
+    @include adaptivValue ('padding-left', 43, 20, 1);
+    @include adaptivValue ('padding-right', 48, 20, 1);
+}
+.whywe__body {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.whywe__title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    color: #181414;
+    @include adaptivValue ('margin-bottom', 37, 20, 1);
+}
+.whywe__advantages {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    @include adaptivValue ('row-gap', 40, 20, 1);
+    @include adaptivValue ('column-gap', 60, 30, 1);
+}
+
+@media (max-width: 1120px) {
+    .whywe__advantages {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media (max-width: 790px) {
+    .whywe__advantages {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .whywe__title{
+        font-size: 28px;
+    }
+}
+
+.aboutcompany {
+    @include adaptivValue ('paddingt-top', 30, 15, 1);
+    @include adaptivValue ('padding-bottom', 60, 20, 1);
+}
+.aboutcompany__body {
+    display: flex;
+    justify-content: space-between;
+}
+.aboutcompany__aboutus,
+.aboutcompany__delivery {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 585px;
+}
+.delivery__wrap,
+.aboutus__wrap {
+    @include adaptivValue ('padding', 60, 30, 1);
+    @include adaptivValue ('padding-right', 50, 30, 1);
+}
+.aboutus__header,
+.delivery__header {
+    display: flex;
+    align-items: center;
+    @include adaptivValue ('margin-bottom', 30, 15, 1);
+}
+
+.aboutus__header{
+    @include adaptivValue ('gap', 31, 15, 1);
+}
+.delivery__header {
+    @include adaptivValue ('gap', 22, 15, 1);
+}
+
+.aboutus__img {
+}
+
+.delivery__title,
+.aboutus__title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    color: #181414;
+}
+
+.delivery__txt,
+.aboutus__txt {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 120%;
+    color: #181414;
+}
+
+
+.aboutus__txt-1,
+.aboutus__txt-2,
+.aboutus__txt-3,
+.aboutus__txt-4,
+.aboutus__txt-5,
+.delivery__txt-1,
+.delivery__txt-2,
+.delivery__txt-3,
+.delivery__txt-4,
+.delivery__txt-5 {
+    @include adaptivValue ('margin-bottom', 20, 10, 1);
+}
+.aboutus__liner,
+.delivery__liner {
+    width: 100%;
+}
+
+@media (max-width: 1182px) {
+    .aboutcompany__body{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 585px) {
+    .aboutus__txt,
+    .delivery__txt{
+        font-size: 11px;
+    }
+    .aboutus__wrap,
+    .delivery__wrap{
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutcompany{
+        display: none;
+    }
+}
