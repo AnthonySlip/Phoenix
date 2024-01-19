@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/phoenix/static/css/main.f8501755.css",
-    "main.js": "/phoenix/static/js/main.070e14ae.js",
+    "main.css": "/phoenix/static/css/main.f313ff99.css",
+    "main.js": "/phoenix/static/js/main.8aaa5dc4.js",
     "static/media/MTitle.png": "/phoenix/static/media/MTitle.643da41fa411f948fad1.png",
     "static/media/certificate1.png": "/phoenix/static/media/certificate1.a003fcd98eeb28363c1a.png",
     "static/media/production-2.png": "/phoenix/static/media/production-2.74924a59d6da0ebf21a3.png",
@@ -22,11 +22,11 @@
     "static/media/Approach.svg": "/phoenix/static/media/Approach.1d55ec16fcf50d3c58362e40deeb9fcb.svg",
     "static/media/Support.svg": "/phoenix/static/media/Support.c222ef32b39172ad2b4f2baf4f33624a.svg",
     "index.html": "/phoenix/index.html",
-    "main.f8501755.css.map": "/phoenix/static/css/main.f8501755.css.map",
-    "main.070e14ae.js.map": "/phoenix/static/js/main.070e14ae.js.map"
+    "main.f313ff99.css.map": "/phoenix/static/css/main.f313ff99.css.map",
+    "main.8aaa5dc4.js.map": "/phoenix/static/js/main.8aaa5dc4.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8501755.css",
-    "static/js/main.070e14ae.js"
+    "static/css/main.f313ff99.css",
+    "static/js/main.8aaa5dc4.js"
   ]
 }
